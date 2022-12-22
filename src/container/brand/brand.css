@@ -1,0 +1,20 @@
+.app__brand {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.app__brand div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+@media screen and (max-width:800px) {
+    .app__brand {
+        flex-direction: column;
+    }
+}

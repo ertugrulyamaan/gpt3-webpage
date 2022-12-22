@@ -1,0 +1,46 @@
+.app__features {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.app__features-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 2rem 0;
+    max-width: 600px;
+}
+
+.app__features-heading h2{
+    color: white;
+    font-family: var(--font-base);
+    font-size: 45px;
+
+    margin-bottom: 2rem;
+}
+
+.app__features-heading p {
+    color: #737373;
+    font-size: 20px;
+    font-family: var(--font-alt);
+}
+
+.app__features-container {
+    margin: 2rem 2rem;
+}
+
+
+@media screen and (max-width:1200px) {
+    .app__features {
+        flex-direction: column;
+    }
+    .app__features-heading {
+        justify-content: center;
+        max-width: 100%;
+    }
+    .app__features-container {
+        margin: 2rem 0;
+    }
+    
+}

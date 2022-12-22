@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-base: 'Cormorant Upright', serif;
+  --font-alt: 'Open Sans', sans-serif;
+  
+  --gradient-text: linear-gradient(89.97deg, #9953e4 1.84%, #b3673e 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #6a4492 -13.86%, #aa8572 99.55%);
+  
+  --color-black: #0C0C0C;
+  --color-gray: #545454;
+  --color-crimson: #F5EFDB;
+  --color-white: #FFFFFF;
+    
+  --color-bg: #040C18;
+  --color-footer : #031B34;
+  --color-blog: #042c54;
+  --color-text: #81AFDD;
+  --color-subtext: #d64220;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: var(--color-bg);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+  color: unset;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+
+.bg__gradient{
+  
+  /*  https://angrytools.com/gradient/  */
+
+   /* ff 3.6+ */
+   background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+   /* safari 5.1+,chrome 10+ */
+   background:-webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+   /* opera 11.10+ */
+   background:-o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+   /* ie 10+ */
+   background:-ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+   /* global 92%+ browsers support */
+   background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text__gradient {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
+.button__custom {
+  padding: 0.5rem 1rem;
+  background-color:#F5EFDB;
+  font-family: var(--font-alt);
+  color: var(--color-gray);
+  border: 2px solid var(--color-golden);
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.line {
+  width:40px;
+  height:4px;
+  background: var(--gradient-bar);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+  
+  margin-top: 0.25rem;
+}
+/* Section padding and margin */
+.section__padding{padding: 4rem 6rem;}
+.section__margin{margin: 4rem 6rem;}
+
+
+@media screen and (max-width:700px){
+  .section__padding{padding: 4rem;}
+  .section__margin{margin: 4rem;}
+}
+
+@media screen and (max-width:550px){
+  .section__padding{padding: 4rem 2rem;}
+  .section__margin{margin: 4rem 2rem;} 
+}
+
